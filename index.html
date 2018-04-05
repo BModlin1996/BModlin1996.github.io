@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <meta charset="utf-8">
-<html>
+<html lang="en-US">
 <head>
  
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -16,25 +16,59 @@
     </div>
     <div id="Home" class="content">
         <h3>Welcome!</h3>
-        <p>
-            This is a profile of projects I have worked on throughout the years, feel free to explore!
+        <p>    This is a profile of projects I have worked on throughout the years, feel free to explore!
         </p>
     </div>
     <div id="About" class="content">
-        <div class="profileCard">
-            <img src="pics/profile.jpg" alt="Avatar" style="width:100%">
-            <div class="profileContainer">
-                <h4 style="text-align:center"><b><u>Bailey Modlin</u></b></h4>
-                <p style="text-align:center">B.S. Computer Science, Coastal Carolina</p>
+        <div class="aboutContainer">
+            <div class="profileCard">
+                <img src="pics/profile.jpg" alt="Avatar" style="width:100%">
+                <div class="profileContainer">
+                    <h4 style="text-align:center"><b><u>Bailey Modlin</u></b></h4>
+                    <p style="text-align:center">B.S. Computer Science <br>Coastal Carolina University</p>
+                </div>
+            </div>
+            <div class="about">
+                <h3>About me</h3>
+                
+                <p style="text-align: left;">
+                    My name is Bailey Modlin, I am a computer scientist that graduated from Coastal Carolina University.
+                </p>
             </div>
         </div>
-        <h3>About me</h3>
-        <p>
-            My name is Bailey Modlin, I am a computer scientist that graduated from Coastal Carolina University.
-        </p>
     </div>
     <div id="Software" class="content">
-        <h4>Software</h4>
+        <h3>Software</h3>
+        <button class="softwareMenu" onclick="openMenu()">Java</button>
+        <div class="dropdownPanel">
+            <h4>Java</h4>
+            <p style="text-align: left;  margin-left: 16px; margin-right: 16px;">I have had experiance with Java ranging from command line programs and webservers to Android studio.</p>
+        </div>
+        <button class="softwareMenu" onclick="openMenu()">C/C++</button>
+        <div class="dropdownPanel">
+            <h4>C/C++</h4>
+        </div>
+        <button class="softwareMenu" onclick="openMenu()">VB.NET</button>
+        <div class="dropdownPanel">
+            <h4>VB.NET</h4>
+        </div>
+        <button class="softwareMenu" onclick="openMenu()">Matlab</button>
+        <div class="dropdownPanel">
+            <h4>Matlab</h4>
+        </div>
+        <button class="softwareMenu" onclick="openMenu()">HTML</button>
+        <div class="dropdownPanel">
+            <h4>HTML</h4>
+        </div>
+        <button class="softwareMenu" onclick="openMenu()">Database</button>
+        <div class="dropdownPanel">
+            <h4>Database</h4>
+        </div>
+        <button class="softwareMenu" onclick="openMenu()">Other</button>
+        <div class="dropdownPanel">
+            <h4>Other</h4>
+        </div>
+        
     </div>
     <div id="Hardware" class="content">
         <h4>Hardware</h4>
@@ -59,6 +93,23 @@
             }
             document.getElementById(tabName).style.display = "block";
             evnt.currentTarget.className += " active";
+        }
+
+        function openMenu() {
+            var menu = getElementsByClassName("softwareMenu");
+            for (var i = 0; 0 < menu.length; i++) {
+                menu[i].addEventListener("active");
+
+                this.classList.toggle("active");
+
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            };
+            
         }
     </script>
 </body>
