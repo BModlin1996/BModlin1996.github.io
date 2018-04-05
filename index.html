@@ -72,6 +72,15 @@
     </div>
     <div id="Hardware" class="content">
         <h4>Hardware</h4>
+        <button class="softwareMenu">Custom PC's</button>
+        <div class="dropdownPanel">
+            <h4>Custom PC's</h4>
+            <p style="text-align: left;  margin-left: 16px; margin-right: 16px;">I have had experiance with Java ranging from command line programs and webservers to Android studio.</p>
+        </div>
+        <button class="softwareMenu">PC Repair</button>
+        <div class="dropdownPanel">
+            <h4>PC Repair</h4>
+        </div>
     </div>
     <div id="Resume" class="content">
         <h4>Resume</h4>
@@ -101,10 +110,10 @@
             menu[i].addEventListener("click", function () {
                 this.classList.toggle("active");
                 var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
                 } else {
-                    panel.style.display = "block";
+                    panel.style.maxHeight = panel.scrollHeight + "px";
                 }
             });
         }

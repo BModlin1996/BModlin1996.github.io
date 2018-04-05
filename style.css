@@ -108,7 +108,8 @@ img {
     padding: 0 18px;
     color: black;
     background-color: white;
-    display: none;
+    max-height: 0;
     overflow: hidden;
     width: 614px;  
+    transition: max-height 0.2s ease-out;
 }
