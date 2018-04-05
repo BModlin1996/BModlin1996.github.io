@@ -39,32 +39,32 @@
     </div>
     <div id="Software" class="content">
         <h3>Software</h3>
-        <button class="softwareMenu" onclick="openMenu()">Java</button>
+        <button class="softwareMenu" >Java</button>
         <div class="dropdownPanel">
             <h4>Java</h4>
             <p style="text-align: left;  margin-left: 16px; margin-right: 16px;">I have had experiance with Java ranging from command line programs and webservers to Android studio.</p>
         </div>
-        <button class="softwareMenu" onclick="openMenu()">C/C++</button>
+        <button class="softwareMenu">C/C++</button>
         <div class="dropdownPanel">
             <h4>C/C++</h4>
         </div>
-        <button class="softwareMenu" onclick="openMenu()">VB.NET</button>
+        <button class="softwareMenu">VB.NET</button>
         <div class="dropdownPanel">
             <h4>VB.NET</h4>
         </div>
-        <button class="softwareMenu" onclick="openMenu()">Matlab</button>
+        <button class="softwareMenu">Matlab</button>
         <div class="dropdownPanel">
             <h4>Matlab</h4>
         </div>
-        <button class="softwareMenu" onclick="openMenu()">HTML</button>
+        <button class="softwareMenu">HTML</button>
         <div class="dropdownPanel">
             <h4>HTML</h4>
         </div>
-        <button class="softwareMenu" onclick="openMenu()">Database</button>
+        <button class="softwareMenu">Database</button>
         <div class="dropdownPanel">
             <h4>Database</h4>
         </div>
-        <button class="softwareMenu" onclick="openMenu()">Other</button>
+        <button class="softwareMenu">Other</button>
         <div class="dropdownPanel">
             <h4>Other</h4>
         </div>
@@ -94,22 +94,19 @@
             document.getElementById(tabName).style.display = "block";
             evnt.currentTarget.className += " active";
         }
-
-        function openMenu() {
-            var menu = getElementsByClassName("softwareMenu");
-            for (var i = 0; 0 < menu.length; i++) {
-                menu[i].addEventListener("active");
-
+    </script>
+    <script>
+        var menu = document.getElementsByClassName("softwareMenu");
+        for (var i = 0; 0 < menu.length; i++) {
+            menu[i].addEventListener("click", function () {
                 this.classList.toggle("active");
-
                 var panel = this.nextElementSibling;
                 if (panel.style.display === "block") {
                     panel.style.display = "none";
                 } else {
                     panel.style.display = "block";
                 }
-            };
-            
+            });
         }
     </script>
 </body>

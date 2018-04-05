@@ -88,6 +88,7 @@ img {
     border: none;
     outline: none;
     transition: 0.4s;
+    width: 650px;
 }
 
     .softwareMenu:after {
@@ -97,6 +98,17 @@ img {
         margin-left: 5px;
     }
 
-.active:after {
+.softwareMenu.active:after {
     content: "\2796";
+}
+
+.dropdownPanel {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 18px;
+    color: black;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    width: 614px;  
 }
