@@ -1,10 +1,65 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <html>
-    <head>
-
-    </head>
-    <body>
-        <h1>Hello world</h1>
-    </body>
+<head>
+ 
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Bailey Modlin</title>
+</head>
+<body>
+    <div class="menuBar">
+        <button class="menuLink" onclick="openTab(event, 'Home')" id="default">Home</button>
+        <button class="menuLink" onclick="openTab(event, 'About')">About</button>
+        <button class="menuLink" onclick="openTab(event, 'Software')">Software</button>
+        <button class="menuLink" onclick="openTab(event, 'Hardware')">Hardware</button>
+        <button class="menuLink" onclick="openTab(event, 'Resume')">Resume</button>
+    </div>
+    <div id="Home" class="content">
+        <h3>Welcome!</h3>
+        <p>
+            This is a profile of projects I have worked on throughout the years, feel free to explore!
+        </p>
+    </div>
+    <div id="About" class="content">
+        <div class="profileCard">
+            <img src="pics/profile.jpg" alt="Avatar" style="width:100%">
+            <div class="profileContainer">
+                <h4 style="text-align:center"><b><u>Bailey Modlin</u></b></h4>
+                <p style="text-align:center">B.S. Computer Science, Coastal Carolina</p>
+            </div>
+        </div>
+        <h3>About me</h3>
+        <p>
+            My name is Bailey Modlin, I am a computer scientist that graduated from Coastal Carolina University.
+        </p>
+    </div>
+    <div id="Software" class="content">
+        <h4>Software</h4>
+    </div>
+    <div id="Hardware" class="content">
+        <h4>Hardware</h4>
+    </div>
+    <div id="Resume" class="content">
+        <h4>Resume</h4>
+    </div>
+    <div id="Contact" class="content">
+        <h4>Contact</h4>
+    </div>
+    <script>
+        document.getElementById("default").click();
+        function openTab(evnt, tabName) {
+            var index, tabContent, tablinks;
+            tabContent = document.getElementsByClassName("content");
+            for (index = 0; index < tabContent.length; index++) {
+                tabContent[index].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("menuLink");
+            for (index = 0; index < tablinks.length; index++) {
+                tablinks[index].className = tablinks[index].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evnt.currentTarget.className += " active";
+        }
+    </script>
+</body>
 </html>

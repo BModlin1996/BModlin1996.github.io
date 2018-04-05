@@ -1,0 +1,66 @@
+﻿body {
+    background-color: #00BFFF;
+}
+
+.menuBar {
+    overflow: hidden;
+    border: 1px solid #00BFFF;
+    background-color: #00BFFF;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+}
+
+.menuBar button {
+    background-color: inherit;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    margin: 0px,0px,0px,0px;
+}
+
+.menuBar button:hover {
+    background-color: #0094ff;
+    color: #cccccc;
+}
+
+.menuBar button.active {
+    color: #ffffff;
+    background-color: #0094ff;
+}
+
+.content {
+    background-color: #0094ff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+    border-radius: 5px;
+    text-align: center;
+    animation: fade 2s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+.profileCard {
+    background: #0094ff;
+    width: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+    border-radius: 5px;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.profileContainer {
+    background: #0094ff;
+    padding: 2px 16px;
+    border-radius: 5px;
+}
