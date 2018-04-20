@@ -1,122 +1,25 @@
-﻿<!DOCTYPE html>
-<meta charset="utf-8">
-<html lang="en-US">
-<head>
- 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Bailey Modlin</title>
-</head>
-<body>
-    <div class="menuBar">
-        <button class="menuLink" onclick="openTab(event, 'Home')" id="default">Home</button>
-        <button class="menuLink" onclick="openTab(event, 'About')">About</button>
-        <button class="menuLink" onclick="openTab(event, 'Software')">Software</button>
-        <button class="menuLink" onclick="openTab(event, 'Hardware')">Hardware</button>
-        <button class="menuLink" onclick="openTab(event, 'Resume')">Resume</button>
-    </div>
-    <div id="Home" class="content">
-        <h3>Welcome!</h3>
-        <p>    This is a profile of projects I have worked on throughout the years, feel free to explore!
-        </p>
-    </div>
-    <div id="About" class="content">
-        <div class="aboutContainer">
-            <div class="profileCard">
-                <img src="pics/profile.jpg" alt="Avatar" style="width:100%">
-                <div class="profileContainer">
-                    <h4 style="text-align:center"><b><u>Bailey Modlin</u></b></h4>
-                    <p style="text-align:center">B.S. Computer Science <br>Coastal Carolina University</p>
-                </div>
-            </div>
-            <div class="about">
-                <h3>About me</h3>
-                
-                <p style="text-align: left;">
-                    My name is Bailey Modlin, I am a computer scientist that graduated from Coastal Carolina University.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div id="Software" class="content">
-        <h3>Software</h3>
-        <button class="softwareMenu" >Java</button>
-        <div class="dropdownPanel">
-            <h4>Java</h4>
-            <p style="text-align: left;  margin-left: 16px; margin-right: 16px;">I have had experiance with Java ranging from command line programs and webservers to Android studio.</p>
-        </div>
-        <button class="softwareMenu">C/C++</button>
-        <div class="dropdownPanel">
-            <h4>C/C++</h4>
-        </div>
-        <button class="softwareMenu">VB.NET</button>
-        <div class="dropdownPanel">
-            <h4>VB.NET</h4>
-        </div>
-        <button class="softwareMenu">Matlab</button>
-        <div class="dropdownPanel">
-            <h4>Matlab</h4>
-        </div>
-        <button class="softwareMenu">HTML</button>
-        <div class="dropdownPanel">
-            <h4>HTML</h4>
-        </div>
-        <button class="softwareMenu">Database</button>
-        <div class="dropdownPanel">
-            <h4>Database</h4>
-        </div>
-        <button class="softwareMenu">Other</button>
-        <div class="dropdownPanel">
-            <h4>Other</h4>
-        </div>
-        
-    </div>
-    <div id="Hardware" class="content">
-        <h4>Hardware</h4>
-        <button class="softwareMenu">Custom PC's</button>
-        <div class="dropdownPanel">
-            <h4>Custom PC's</h4>
-            <p style="text-align: left;  margin-left: 16px; margin-right: 16px;">I have had experiance with Java ranging from command line programs and webservers to Android studio.</p>
-        </div>
-        <button class="softwareMenu">PC Repair</button>
-        <div class="dropdownPanel">
-            <h4>PC Repair</h4>
-        </div>
-    </div>
-    <div id="Resume" class="content">
-        <h4>Resume</h4>
-    </div>
-    <div id="Contact" class="content">
-        <h4>Contact</h4>
-    </div>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Image transfromations Math 344</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
     <script>
-        document.getElementById("default").click();
-        function openTab(evnt, tabName) {
-            var index, tabContent, tablinks;
-            tabContent = document.getElementsByClassName("content");
-            for (index = 0; index < tabContent.length; index++) {
-                tabContent[index].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("menuLink");
-            for (index = 0; index < tablinks.length; index++) {
-                tablinks[index].className = tablinks[index].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evnt.currentTarget.className += " active";
-        }
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Math344Prj.json", {onProgress: UnityProgress});
     </script>
-    <script>
-        var menu = document.getElementsByClassName("softwareMenu");
-        for (var i = 0; 0 < menu.length; i++) {
-            menu[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            });
-        }
-    </script>
-</body>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">Image transfromations Math 344</div>
+      </div>
+    </div>
+  </body>
 </html>
