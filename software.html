@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="menu.js"></script>
+    <script>
+        var menu = document.getElementsByClassName("softwareMenu");
+        for (var i = 0; 0 < menu.length; i++) {
+            menu[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+    <title>Bailey Modlin - Software</title>
+</head>
+<body>
+
+    <div class="menuBar">
+        <button class="menuLink" onclick="openTab(event, 'Home')" id="default">Home</button>
+        <button class="menuLink" onclick="openTab(event, 'About')">About</button>
+        <button class="menuLink" onclick="openTab(event, 'Software')">Software</button>
+        <button class="menuLink" onclick="openTab(event, 'Hardware')">Hardware</button>
+        <button class="menuLink" onclick="openTab(event, 'Resume')">Resume</button>
+    </div>
+
+    <div id="Software" class="content">
+        <h3>Software</h3>
+        <button class="softwareMenu">Java</button>
+        <div class="dropdownPanel">
+            <h4>Java</h4>
+            <p style="text-align: left;  margin-left: 16px; margin-right: 16px;">I have had experiance with Java ranging from command line programs and webservers to Android studio.</p>
+            <table width="100%">
+                <tr>
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <th>Link</th>
+                </tr>
+            </table>
+        </div>
+        <button class="softwareMenu">C/C++</button>
+        <div class="dropdownPanel">
+            <h4>C/C++</h4>
+            <table width="100%">
+                <tr>
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <th>Link</th>
+                </tr>
+            </table>
+        </div>
+        <button class="softwareMenu">VB.NET</button>
+        <div class="dropdownPanel">
+            <h4>VB.NET</h4>
+        </div>
+        <button class="softwareMenu">Matlab</button>
+        <div class="dropdownPanel">
+            <h4>Matlab</h4>
+        </div>
+        <button class="softwareMenu">HTML</button>
+        <div class="dropdownPanel">
+            <h4>HTML</h4>
+        </div>
+        <button class="softwareMenu">Database</button>
+        <div class="dropdownPanel">
+            <h4>Database</h4>
+        </div>
+        <button class="softwareMenu">Other stuff</button>
+        <div class="dropdownPanel">
+            <h4>Other</h4>
+        </div>
+    </div>
+</body>
+</html>
