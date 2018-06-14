@@ -4,7 +4,7 @@
             window.location.href = "index.html";
             break; 
         case "About":
-            window.location.href = "about.html";
+            window.location.href = "#about";
             break;
         case "Software":
             window.location.href = "software.html";

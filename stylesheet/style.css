@@ -1,6 +1,8 @@
 ﻿body {
-    background-color: #000000;
+    background-color: #343a40;
     margin: 0px 0px 0px 0px;
+    color: rgba(128, 128, 128, 1);
+    text-align: center; 
 }
 
 .menuBar {
@@ -10,7 +12,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
 }
 
-.menuBar button {
+.menuLink {
     background-color: inherit;
     color: #ffffff;
     border: none;
@@ -34,9 +36,9 @@
 }
 
 .content {
-    opacity: .85;
-    color: #FFFFFF;
-    background-color: #000000;
+ 
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, .6);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
     border-radius: 5px;
     text-align: center;
@@ -44,12 +46,24 @@
     animation: fade 2s;
 }
 
+.content-light {
+
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    animation: fade 2s;
+}
+
+
 @keyframes fade {
     from {
         opacity: 0;
     }
     to {
-        opacity: .85; 
+        opacity: 1; 
     }
 }
 
@@ -73,7 +87,11 @@ img {
 }
 
 .aboutContainer {
+
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0);
     display: flex;
+
 }
 
 .about {
@@ -81,38 +99,8 @@ img {
     margin-left: 16px;
 }
 
-.softwareMenu {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    width: 650px;
-}
 
-    .softwareMenu:after {
-        content: '\02795';
-        font-size: 13px;
-        float: right;
-        margin-left: 5px;
-    }
 
-.softwareMenu.active:after {
-    content: "\2796";
-}
 
-.dropdownPanel {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 18px;
-    color: black;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    width: 614px;  
-    transition: max-height 0.2s ease-out;
-}
+
+

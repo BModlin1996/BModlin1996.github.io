@@ -1,26 +1,133 @@
 ﻿<!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="menu.js"></script>
     <title>Bailey Modlin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheet/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/menu.js"></script>
 </head>
 <body>
 
-    <div class="menuBar">
-        <button class="menuLink" onclick="openTab(event, 'Home')" id="default">Home</button>
-        <button class="menuLink" onclick="openTab(event, 'About')">About</button>
-        <button class="menuLink" onclick="openTab(event, 'Software')">Software</button>
-        <button class="menuLink" onclick="openTab(event, 'Hardware')">Hardware</button>
-        <button class="menuLink" onclick="openTab(event, 'Resume')">Resume</button>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Bailey Modlin Computers</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#top">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#software">Software</a>    
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#hardware">Hardware</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="resume.html">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center" style="background-image: url(pics/header.png); background-repeat: no-repeat; background-size: 100% auto;">
+        <h3 style="color: rgba(255, 255, 255, 1)">Welcome!</h3>
+        <button>RESUME</button>
     </div>
 
-    <div id="Home" class="content">
-        <h3>Welcome!</h3>
-        <p>
-            Welcome, this is a website that I created to showcase some of the programs that I have created throughout the years. 
-        </p>
+    <div class="">
+        <div id="about" class="aboutContainer">
+            <div class="profileCard">
+                <img src="pics/profile.jpg" alt="Avatar" style="width:100%">
+                <div class="profileContainer">
+                    <h4 style="text-align:center"><b><u>Bailey Modlin</u></b></h4>
+                    <p style="text-align:center">B.S. Computer Science <br>Coastal Carolina University</p>
+                </div>
+            </div>
+            <div class="about">
+                <h3>About me</h3>
+
+                <p style="text-align: left;">
+                    My name is Bailey Modlin I’m a computer science student at Coastal Carolina University.  I currently have experience in several programming languages such as C/C++, Java, and JavaScript.  I also have experience programming in Linux, .NET and mobile phone environments.  I am always looking expand my knowledge by learning new languages and programming techniques.  I hope to obtain a job in software development after graduating.
+                </p>
+            </div>
+        </div>
     </div>
+    <div class="content">
+        <div id="software">
+            <h3>Software</h3>
+            <div class="info">
+                <h5>Languages</h5>
+                <div class="list">
+                    <ul>
+                        <li>C/C++</li>
+                        <li>C#</li>
+                        <li>Java</li>
+                        <li>Javascript</li>
+                        <li>VB.NET</li>
+                    </ul>
+                  </div>
+             </div>
+            <div id="info">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content-light">
+        <div id="hardware">
+            <h4>Hardware</h4>
+                <h5>Custom PC's</h5>
+               
+                <table align="center">
+                    <tr>
+                        <th>CPU</th>
+                        <td>AMD Ryzen Threadripper 1950x</td>
+                    </tr>
+                    <tr>
+                        <th>Motherboard</th>
+                        <td>Asus Zenieth Extreme</td>
+                    <tr>
+                        <th>Memory</th>
+                        <td>16 GB 3200 MHz</td>
+                    </tr>
+                    <tr>
+                        <th>Storage</th>
+                        <td>512 GB SSD</td>
+                    </tr>
+                    <tr>
+                        <th>GPU</th>
+                        <td>Nvidia GeForce GTX 1080ti</td>
+                    </tr>
+                    <tr>
+                        <th>Cooling</th>
+                        <td>Air</td>
+                    </tr>
+                </table>
+            </div>
+                <h5>PC Repair</h5>
+      
+        </div>
+        <div class="content">
+            <div id="contact">
+                <h4>Contact</h4>
+            </div>
+        </div>
+        <p>Copyright &copy; 2018 Bailey Modlin</p>
+        <p>Created by <a href="https://bmodlin1996.github.io/">Bailey Modlin</a></p>
 </body>
 </html>
