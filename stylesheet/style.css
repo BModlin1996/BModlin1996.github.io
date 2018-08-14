@@ -92,6 +92,7 @@ img {
 
 .about {
     flex-grow:initial;
+    width: 50%;
     margin-left: 16px;
 }
 
