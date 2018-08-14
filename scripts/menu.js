@@ -1,21 +1,11 @@
 ﻿function openTab(evnt, tabName) {
     switch (tabName) {
-        case "Home":
-            window.location.href = "index.html";
-            break; 
-        case "About":
-            window.location.href = "#about";
+        case "resume":
+            window.location.href = "Resume.pdf";
             break;
-        case "Software":
-            window.location.href = "software.html";
-            break; 
-        case "Hardware":
-            window.location.href = "hardware.html";
-            break; 
-        case "Resume":
-            window.location.href = "resume.html";
-            break; 
-        case "Contact":
-            window.location.href = "contact.html";
     }
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
 }

@@ -4,12 +4,13 @@
     <title>Bailey Modlin</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="/scripts/menu.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/stylesheet/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/scripts/menu.js"></script>
+
 </head>
 <body>
 
@@ -27,13 +28,10 @@
                     <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#software">Software</a>    
+                    <a class="nav-link" href="#software">Software</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#hardware">Hardware</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="resume.html">Resume</a>
+                    <a class="nav-link" href="Resume.pdf">Resume</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
@@ -43,91 +41,120 @@
         </div>
     </nav>
 
-    <div class="jumbotron text-center" style="background-image: url(pics/header.png); background-repeat: no-repeat; background-size: 100% auto;">
-        <h3 style="color: rgba(255, 255, 255, 1)">Welcome!</h3>
-        <button>RESUME</button>
+    <div id="overlay" onclick="off()">
+        <div id="overlayTextLarge">WELCOME!</div>
+        <div id="overlayTextSmall">Please feel free to provide feedback, thank you!</div>
+        <div id="overlayTextSmall">Click anywhere to began</div> 
     </div>
 
-    <div class="">
-        <div id="about" class="aboutContainer">
+   
+
+    <div class="jumbotron text-center" style="background-image: url(pics/header.png); background-repeat: no-repeat; background-size: 100% auto;">
+        <h3 style="color: rgba(255, 255, 255, 1)">Welcome!</h3>
+        <button class="menuLink" onclick="openTab(event, 'resume')">RESUME</button>
+    </div>
+
+    <div class="content-light">
+        <div id="aboutContainer" class="aboutContainer">
             <div class="profileCard">
                 <img src="pics/profile.jpg" alt="Avatar" style="width:100%">
                 <div class="profileContainer">
                     <h4 style="text-align:center"><b><u>Bailey Modlin</u></b></h4>
                     <p style="text-align:center">B.S. Computer Science <br>Coastal Carolina University</p>
+                    <h5>Follow Me:</h5>
+                    <a href="https://www.youtube.com/channel/UCxgOTB7AuM9aauOb_Dczbjg?view_as=public" style="color:rgba(255, 255, 255, 1)">YouTube</a>
+                    <a href="https://www.linkedin.com/in/bailey-modlin-824320146/" style="color:rgba(255, 255, 255, 1)">LinkedIn</a>
+                    <a href="https://github.com/BModlin1996" style="color:rgba(255, 255, 255, 1)">GitHub</a>
                 </div>
             </div>
             <div class="about">
-                <h3>About me</h3>
+                <br />
+                <h3>About</h3>
 
                 <p style="text-align: left;">
-                    My name is Bailey Modlin I’m a computer science student at Coastal Carolina University.  I currently have experience in several programming languages such as C/C++, Java, and JavaScript.  I also have experience programming in Linux, .NET and mobile phone environments.  I am always looking expand my knowledge by learning new languages and programming techniques.  I hope to obtain a job in software development after graduating.
+                    My name is Bailey Modlin and I am a computer science student at Coastal Carolina University.  I currently have experience in several programming languages such as C/C++, Java, and JavaScript.  I also have experience programming in Linux, .NET and mobile phone environments.  I am always looking expand my knowledge by learning new languages and programming techniques.  I hope to obtain a job in software development after graduating.
                 </p>
             </div>
         </div>
     </div>
     <div class="content">
-        <div id="software">
+        <div class="software">
+            <br />
             <h3>Software</h3>
             <div class="info">
-                <h5>Languages</h5>
-                <div class="list">
-                    <ul>
-                        <li>C/C++</li>
-                        <li>C#</li>
-                        <li>Java</li>
-                        <li>Javascript</li>
-                        <li>VB.NET</li>
-                    </ul>
-                  </div>
-             </div>
-            <div id="info">
-                <ul>
-
-                </ul>
+                <div class="langContain">
+                    <br />
+                    <h5>Languages</h5>
+                    <br />
+                    <div class="list">
+                        <ul style="text-align: left">
+                            <li>C/C++</li>
+                            <li>C#</li>
+                            <li>Java</li>
+                            <li>Javascript</li>
+                            <li>VB.NET</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="langContain">
+                    <br />
+                    <h5>Database</h5>
+                    <br />
+                    <div class="list">
+                        <ul style="text-align: left">
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>Neo4j</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="langContain">
+                    <br />
+                    <h5>Developement Software</h5>
+                    <br />
+                    <div class="list">
+                        <ul style="text-align: left">
+                            <li>Android Studio</li>
+                            <li>Eclipse</li>
+                            <li>Matlab</li>
+                            <li>Microsoft Visual Studios</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="content-light">
-        <div id="hardware">
-            <h4>Hardware</h4>
-                <h5>Custom PC's</h5>
-               
-                <table align="center">
-                    <tr>
-                        <th>CPU</th>
-                        <td>AMD Ryzen Threadripper 1950x</td>
-                    </tr>
-                    <tr>
-                        <th>Motherboard</th>
-                        <td>Asus Zenieth Extreme</td>
-                    <tr>
-                        <th>Memory</th>
-                        <td>16 GB 3200 MHz</td>
-                    </tr>
-                    <tr>
-                        <th>Storage</th>
-                        <td>512 GB SSD</td>
-                    </tr>
-                    <tr>
-                        <th>GPU</th>
-                        <td>Nvidia GeForce GTX 1080ti</td>
-                    </tr>
-                    <tr>
-                        <th>Cooling</th>
-                        <td>Air</td>
-                    </tr>
-                </table>
-            </div>
-                <h5>PC Repair</h5>
-      
+        <div id="contact">
+            <br />
+            <h4>Contact</h4>
+            <form action="https://formspree.io/baileymodlin@live.com" method="POST">
+                <input type="text" id="fName" name="firstname" placeholder="Please enter your first name.">
+                <br>
+                <br>
+                <input type="text" id="lName" name="lastname" placeholder="Please enter your last name.">
+                <br>
+                <br>
+                <input type="email" id="email" name="_replyto" placeholder="youremail@example.com">
+                <br>
+                <br>
+                <textarea id="subject" name="subject" placeholder="Please type information here..."></textarea>
+                <br>
+                <br>
+                <input type="submit" value="Submit">
+                <br>
+                <br>
+                <input type="hidden" name="_next" value="https://bmodlin1996.github.io/" />
+            </form>
         </div>
-        <div class="content">
-            <div id="contact">
-                <h4>Contact</h4>
-            </div>
-        </div>
-        <p>Copyright &copy; 2018 Bailey Modlin</p>
-        <p>Created by <a href="https://bmodlin1996.github.io/">Bailey Modlin</a></p>
+    </div>
+   
+    <br />
+    <p>Copyright &copy; 2018 Bailey Modlin</p>
+    <p>Created by <a href="https://bmodlin1996.github.io/" style=" color: rgba(128, 128, 128, 1)">Bailey Modlin</a></p>
 </body>
 </html>
