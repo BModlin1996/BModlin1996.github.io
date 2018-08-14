@@ -91,8 +91,8 @@ img {
 }
 
 .about {
-    flex-grow: 1;
-    width: 800px;
+    flex-grow:initial;
+    width: 500px;
     margin-left: 16px;
 }
 
